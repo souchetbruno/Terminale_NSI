@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body {
+
+    background-color: #F0F3F3;
+}
+
+.banner {
+    background-color: rgb(135, 206, 235);
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.banner > * {
+    margin: 0 auto 0 auto;
+}
+
+.banner > .title {
+    font-size: 35px;
+    align-self: center;
+}
+
+.banner > #qrcode, .banner > #logo {
+    height: 85%;
+    margin: auto 35px auto 35px;
+}
+
+hr.separator {
+    height: 3px;
+    background-color: rgb(7, 101, 177);
+    border: none;
+}
+
+a#return-button {
+    text-align: center;
+    margin: auto 55px auto 35px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+a#return-button:active {
+    color: black;
+}
+
+.content {margin-top: 50px ;margin-left:50px;
+    width: 90%;
+    height: 100%;
+}
+
+ol.consignes, p.consignes {
+    padding: 15px 0 15px 75px !important;   
+}
+
+pre {
+    margin: 5px;
+    width: 80%;
+    border-radius: 25px;
+}
