@@ -1,0 +1,194 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="syntaxe_self.css">
+    <link rel="shortcut icon" href="../img/site-icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/code-highlighting/prism.css">
+    <script src="../css/code-highlighting/prism.js"></script>
+
+    <title>Python | Syntaxe</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="../img/logo.PNG" id="logo">
+        <p class="title">Python | Syntaxe</p>
+        <img src="../img/qrcode_termNSI.svg" id="qrcode">
+        <a href="../index.html" id="return-button"> « Retour</a>
+    </div>
+    <hr class="separator">
+    <div class="content">
+        <ol class="general-list">
+            <div class="links">
+                <div class="basics">
+                    <a href="#commentaire" target="_self">1. Les commentaires</a><br>
+                    <a href="#variable" target="_self">2. Les variables</a><br>
+                    <a href="#cast" target="_self">3. Le Cast</a><br>
+                    <a href="#str" target="_self">4. Les chaînes de caractères</a><br>
+                    <a href="#boolean" target="_self">5. Les booléens</a><br>
+                    <a href="#operateur" target="_self">6. Les opérateurs</a><br>
+                    <a href="#lists" target="_self">7. Les listes/tableaux</a><br>
+                    <a href="#tuples" target="_self">8. Les tuples</a><br>
+                    <a href="#dicts" target="_self">9. Les dictionnaires</a><br>
+                    <a href="#ifelifelse" target="_self">10. if...elif...else</a><br>
+                    <a href="#whiles" target="_self">11. Les boucles while</a><br>
+                    <a href="#fors" target="_self">12. Les boucles for</a><br>
+                </div>
+                <div class="complex">
+                    <a href="#nested-loops" target="_self">13. Les boucles imbriquées</a><br>
+                    <a href="#functions" target="_self">14. Les fonctions</a><br>
+                    <a href="#classes" target="_self">15. Les classes</a><br>
+                    <a href="#imports" target="_self">16. Les importations</a><br>
+                    <a href="#files" target="_self">17. Les fichiers</a><br>
+                </div>
+            </div>
+            <li id="commentaire">
+                Le commentaire : se précède d'un # :  <code class="lang-py"> # Ceci est un commentaire </code>  mais peut aussi s'écrire d'une façon particulière <br> <code class="lang-py"> """ Ceci est un commentaire qui peut être multiligne, utilisé aussi dans les docstring """</code>
+            </li>
+            <li id="variable">
+                La variable : <code class="lang-py">nom = valeur</code>, par exemple <code class="lang-py">a = 1</code> mais aussi <code class="lang-py">somme = 23.56</code> ou encore <code class="lang-py">nom = "Souchet"</code>
+            </li>
+            <li id="cast">
+                Le cast : <code class="lang-py">variable = nom_du_type(variable_2)</code>, par exemple <code class="lang-py">a = int(15.9)</code> mais aussi <code class="lang-py">b = str(28)</code> ou encore <code class="lang-py">c = int("32")</code> <br>
+                <em>A savoir : les types primaires existants sont : </em><code class="lang-py">str, int, float, complex, list, tuple, dict, set, frozenset, bool, bytes, bytearray, memoryview</code>
+            </li>
+            <li id="str">
+                Les chaînes de caractère : Ils peuvent s'écrire de plusieurs façons, avec des guillemets simples : <code class="lang-py">'NSI'</code> ou avec des guillemets doubles <code class="lang-py">"NSI"</code>, vous pouvez aussi, comme pour les commentaires, tripler le symbole afin de faire une chaîne de caractère multiligne :
+                <pre><code class="lang-py">
+"""
+Ceci
+est
+une chaîne de caractères
+sur plusieurs lignes
+"""
+                </code></pre>
+                Notez que les guillemets simples fonctionneront aussi
+            </li>
+            <li id="boolean">
+                Les booléens : Sous leur forme stricte : <code class="lang-py">True</code> ou <code class="lang-py">False</code> ou alors sous forme de condition, qui (après calcul), ont le rôle de booléens : <br>
+                <pre><code class="lang-py">
+# la syntaxe d'une condition : 
+valeur opération valeur
+
+# par exemple :
+5 == 5    # vaudra True
+
+5 != 9    # vaudra True
+5 == 9    # vaudra False
+
+9 > 5     # vaudra True
+9 < 5     # vaudra False
+
+4 + 5 > 5 # vaudra True, car python lira ((4 + 5) > 5) soit (9 > 5) soit True
+
+# on peut faire intervenir les opérateurs suivants : and, or, not et in
+
+1 < 2 and 5 < 6 # vaudra True, mais
+2 < 1 and 5 < 6 # vaudra False : 2 n'est pas inférieur a 1, et l'opérateur "and" nécessite True de chaque côté
+
+1 < 2 or 5 < 6  # vaudra True, mais aussi
+2 < 1 or 5 < 6  # vaudra True, car l'opérateur "or" nécessite qu'un (ou plus) True
+
+# l'opérateur not permet d'inverser un booléen, et a ce titre une condition : 
+
+not False      # vaut True
+not True       # vaut False
+
+# donc les exemples suivants fonctionnent : 
+
+not (2 < 1)      # vaudra True  : car lu par python comme : not (False)   puis   True
+not (5 + 3 < 9)  # vaudra False : car lu par python comme : not (8 < 9)   puis   not (False)   puis   True
+
+# cas particulier du cast vers du booléen : 
+
+bool(0)          # vaudra False, tout comme 
+bool(None)       # c'est dû a une propriété du langage C, précurseur des langages de programmation actuels, cependant :
+
+bool(25)
+bool("NSI")
+bool(456.86468)  # vaudront tous True, car différents de 0 et None, le type ici n'importe pas.
+                </code></pre>
+            </li>
+            <li id="operateur">
+                Les opérateurs : 
+                <pre><code class="lang-py">
+# Comme vu précédemment, les opérateurs jouent une part importante en programmation
+
+a + b    # vaudra la somme de a et b
+4 + 5    # vaudra 9
+
+a - b    # vaudra la différence de a par b
+a * b    # vaudra le produit de a par b
+a / b    # vaudra le quotient de a par b (attention au type, int et float ne fonctionnent pas de la même façon !)
+
+# des opérateurs moins connus 
+
+a % b    # vaudra le reste d'une division euclidienne de a par b
+a ** b   # vaudra le résultat de : a puissance b
+a // b   # vaudra le quotient d'une division euclidienne de a par b (soit la partie entière de a / b)
+                </code></pre>
+                <br>
+                Les opérateurs d'assignation : 
+                <pre><code class="lang-py">
+# Pour affecter une valeur, on peut écrire ceci (exemple) : 
+
+a = a + 1   # pour augmenter a de 1, mais on peut aussi écrire
+a += 1      # on place l'opérateur suivi d'un = pour expliquer la ré-affectation de la valeur. a devient alors a + 1
+
+# Au même titre, les opérations d'assignation suivantes sont possibles :
+
+a += b      # signifie : a = a + b
+a -= b      # signifie : a = a - b
+a *= b      # signifie : a = a * b
+a /= b      # signifie : a = a / b
+a %= b     # signifie : a = a % b
+a //= b     # signifie : a = a // b
+a **= b     # signifie : a = a ** b
+                </code></pre>
+            </li>
+            <li id="lists">
+                Les listes / tableaux, sont écrits avec des <b>crochets</b> : 
+<pre><code class="lang-py">
+# on écrit une liste / un tableau de la façon suivante
+
+tab = [valeurs]
+
+# par exemple : 
+
+tab1 = [ ]
+tab2 = [0]
+tab3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] # on sépare les différentes valeurs par des virgules
+tab4 = ["J'apprends", "la", "syntaxe", "d'un", "tableau"]
+
+</code></pre>
+            </li>
+            <li id="tuples">
+                Les tuples / p-uplets, sont écrits avec des <b>parenthèses</b> :
+<pre><code class="lang-py">
+# on écrit un tuple / un p-uplet de la façon suivante
+
+couple = (valeurs)
+
+# par exemple : 
+
+couple1 = ( )
+couple2 = (0)
+couple3 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) # on sépare les différentes valeurs par des virgules
+couple4 = ("J'apprends", "la", "syntaxe", "d'un", "tuple")
+
+</code></pre>
+            </li>
+            <li id="dicts">
+                Les dictionnaires, sont écrits avec des <b>accolades</b> :
+<pre><code class="lang-py">
+
+
+
+</body>
+</html>
