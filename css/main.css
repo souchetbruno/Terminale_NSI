@@ -25,8 +25,7 @@ a {text-decoration:none;color:blue}
     font-size: 50px;
 	line-height:50px;
     text-align: center;
-	animation : mon-animation,grow-shrink,expand ;
-	animation-duration: 5s,5s,5s;
+
 }
 
 .banner > #qrcode, .banner > #logo {
@@ -68,7 +67,7 @@ hr.separator {
 	}
 .chapters > ol > li > a {font-size:21px}
 
-.chapters > ol > li > ol {margin: 5px 25px 5px 45px ;font-size:21px;line-height:25px:}
+.chapters > ol > li > ol {margin: 5px 25px 5px 45px ;font-size:21px;line-height:25px}
 .chapters > ol > li > ol > li > a {font-size:21px}
 #chapter-delimiter {
     margin: 7px 0 7px 0;
