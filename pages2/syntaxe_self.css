@@ -1,0 +1,43 @@
+ol.general-list {
+    padding-top: 75px;
+    padding-left: 150px;
+}
+
+ol {
+    padding: 35px 0 25px 55px;
+}
+
+li {
+    font-size: 18px;
+    line-height: 1.5cm;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(7, 101, 177);
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.2cm;
+}
+
+#p1 {
+    text-indent: 7mm;
+}
+
+#p2, #p3, #p5 {
+    text-indent: 14mm;
+}
+
+#p4 {
+    text-indent: 28mm;
+}
+
+.links {
+    columns: 2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
