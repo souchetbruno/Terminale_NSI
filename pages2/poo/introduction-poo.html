@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/default.css">
+    <link rel="stylesheet" href="self.css">
+    <link rel="shortcut icon" href="../../img/site-icon.ico" type="image/x-icon">
+    <title>Programmation Orientée Objet</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="../../img/logo.PNG" id="logo">
+        <p class="title">P.O.O - Intro</p>
+        <img src="../../img/qrcode_termNSI.svg" id="qrcode">
+        <a href="../../index.html" id="return-button"> « Retour</a>
+    </div>
+    <hr class="separator">
+    <div class="content">
+        <ol class="general-list" type="1">
+            <p>La Programmation Orientée Objet (POO) repose, comme son nom l’indique, sur le concept <b>d’objet</b>.</p>
+            <p>Un objet dans la vie courante, vous connaissez, mais en informatique qu’est ce que c’est ? une variable ? une fonction ?</p>
+            <p>Ni l’un ni l’autre, c’est un nouveau concept.</p>
+            <p>Imaginez un objet très complexe (par exemple un moteur de voiture) : il est évident qu’en regardant cet objet, on est frappé par sa complexité (pour un non spécialiste).</p>
+            <p>Imaginez que l’on enferme cet objet dans une caisse et que l’utilisateur de l’objet n’ait pas besoin d’en connaître son principe de fonctionnement interne pour pouvoir l’utiliser.</p>
+            <p>L’utilisateur a, à sa disposition, des boutons, des manettes et des écrans de contrôle pour faire fonctionner l’objet, ce qui rend son utilisation relativement simple. C’est ce qu’on fait quand on conduit ! C'est ce qu'on appelle l'<b>interface</b></p>
+            <p>La mise au point de l’objet (par des ingénieurs) a été très complexe. C'est ce qu'on appelle l'<b>implémentation</b>
+                <br>En revanche son utilisation est relativement simple.</p>
+            <p>Programmer de manière orientée objet, c’est un peu reprendre cette idée : utiliser des objets sans se soucier de leur complexité <b>interne</b>.</p>
+            <p>Pour utiliser ces objets, nous n’avons pas à notre disposition des boutons, des manettes ou encore des écrans de contrôle, mais <b>des attributs et des méthodes</b> (nous aurons l’occasion de revenir longuement sur ces 2 concepts).</p>
+            <p><b>Mais c'est du déjà vu !</b></p>
+            <li><h3>Premier exemple</h3>
+                <ol class="consignes">
+                    <p>
+                        Dans une console Python, tapez les codes suivants et notez les réponses : <br>
+                        >>> nb = 13 <br>
+                        >>> type(nb) <br>
+                        Ainsi nb est une variable qui fait partie de la classe des entiers (integer). <br>
+                        >>> dir(nb) #dir() permet de donner la liste des méthodes et des attributs d’une variable <br>
+                        On observe une série d’expressions et à la fin des mots comme numerator et denominator qui sont plus parlants ; ces mots représentent des attributs. <br>
+                        Essayez de trouver les réponses avant de cliquer sur ‘entrée’. <br>
+                        >>> nb.numerator <br>
+                        >>> nb.denominator <br>
+                        >>> nb.bit_length() >>> help(nb.bit_lenght)
+                    </p>
+                </ol>
+            </li>
+            <li><h3>Deuxième exemple</h3>
+                <ol class="consignes">
+                    <p>
+                        Dans une console Python, tapez les codes suivants et notez les réponses : <br>
+                        >>> tableau = [1,2,3] <br>
+                        >>> type(tableau) <br>
+                        >>> dir(tableau) <br>
+                        On observe une séries d’expressions encadrées par des underscores doubles ( __ ) et des mots plus connus à la fin, qu’on a déjà utilisé avec des variables de type ‘list’. <br>
+                        Essayez de trouver la réponse avant de cliquer sur ‘entrée’ pour la deuxième ligne en-dessous. <br>
+                        >>> tableau.append(nb) <br>
+                        >>> tableau <br>
+                    </p>
+                </ol>
+            </li>
+            <p>On vient d’utiliser des objets avec des attributs et des méthodes (fonctions):</p>
+            <ol class="consignes">
+                <p>
+                    nb = 5 # on instancie une variable ‘nb’ de type ‘int’ <br>
+                    nb.numerator # ’numerator’ est un attribut de ‘nb’ <br>
+                    tableau = [1,2,3] # On instancie une variable ‘tableau’ de type ‘list’ <br>
+                    tableau.append(nb) # ‘append’ est une méthode de ‘tableau’ <br>
+                </p>
+            </ol>
+            <p>Ainsi en Python, toute valeur est un objet, tout objet est associé à un type et un type définit ce qu’on peut faire avec l’objet.</p>
+            <p>Les objets de type ‘int’ sont des nombres entiers qu’on peut additionner, soustraire, etc.</p>
+            <p>Les objets de type ‘list’ sont des tableaux de nombres (par exemple) qu’on peut trier, ajouter, enlever, compter, etc.</p>
+            <p><b>La programmation orientée objet nous permet de définir nos propres types d’objets, avec leurs propriétés (=attributs) et leurs fonctions (=méthodes). C'est ce que nous allons faire maintenant.</b></p>
+        </ol>
+    </div>
+</body>
+</html>
