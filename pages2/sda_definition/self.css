@@ -1,0 +1,23 @@
+ol.general-list {
+    padding-top: 75px;
+    padding-left: 150px;
+}
+
+ol { 
+    padding: 25px 0 25px 55px;
+}
+
+li { margin-left:20px;
+    font-size: 18px;
+    line-height: 1cm;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(7, 101, 177);
+}
+
+p {  margin-left:30px;
+    font-size: 20px;
+    line-height: 1.2cm;
+}
